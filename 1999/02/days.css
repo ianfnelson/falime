@@ -1,0 +1,52 @@
+A:link { text-decoration: none }
+A:active { text-decoration: none }
+A:visited { text-decoration: none }
+A:hover { color: #98FB98 }
+
+
+a	{
+	font-family: Verdana, Univers, Arial, Sans-Serif, Helvetica;
+	font-size: 10pt;
+	color: 006400;
+}
+
+td	{
+	font-family: Verdana, Univers, Arial, Sans-Serif, Helvetica;
+	font-size: 10pt;
+}
+
+
+body {
+	background-image: url(printout.JPG);
+	background-attachment: fixed;
+	font-family: Verdana, Univers, Arial, Sans-Serif, Helvetica;
+	font-size: 10pt;
+}
+
+
+p	{
+	margin: 0;
+	margin-left: 100px;
+	line-height: 14pt;
+	font-family: Verdana, Univers, Arial, Sans-Serif, Helvetica;
+	font-size: 10pt;
+	text-indent: 1.8em;
+	color: #000000;
+}
+
+p.first {
+	margin-top: 12pt;
+	text-indent: 0;
+}
+
+p.location {
+	text-indent: 0;
+	font-weight: bold;
+}
+
+p.time {
+	margin-top: 12pt;
+	text-indent: 0;
+	font-weight: bold;
+	font-style: italic;
+}

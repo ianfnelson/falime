@@ -1,0 +1,123 @@
+<HTML>
+<STYLE TYPE="text/css">
+<!--
+A:link { text-decoration: none }
+A:active { text-decoration: none }
+A:visited { text-decoration: none }
+A:hover { background-color: #00FF00;
+	color: #3300cc }
+// -->
+</STYLE>
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+
+<!--
+
+document.write();
+
+function header(d)
+{
+	parent.headview.document.clear();
+	parent.headview.document.write("<HTML><BODY BGCOLOR=\"#FFFFFF\" TEXT=\"#000000\" LINK=\"#CC0000\" VLINK=\"#330099\" ALINK=\"#FF3300\"><FONT FACE=\"Verdana, Univers, Arial, Sans-Serif, Helvetica\" SIZE=+3><B>" + d + " " + monthname + " " + year + " </B><FONT SIZE=0 COLOR=gray>Y2K-" + (519-d) + "<BR><FONT SIZE=+2 COLOR=black>" + entry[d] + "</BODY><HTML>");
+	parent.headview.document.close();
+
+}
+
+function inents()
+{
+	for (var i = 1; i <= 31; i++)
+		this[i]=0;
+}
+
+function calendar(days,startday) 
+{
+
+	lmonth = "07";
+	month = "08";
+	nmonth = "09";
+	monthname = "August"
+	year = "1998";
+
+	entry = new inents();
+
+entry[31] = "Typical bank holiday";
+entry[29] = "Quiz machines";
+entry[28] = "A year of car ownership";
+entry[27] = "I Smell Winter";
+entry[26] = "Smells like teen spirit";
+entry[25] = "Aching";
+entry[24] = "Smelly";
+entry[23] = "Wet";
+entry[22] = "Dry";
+entry[21] = "Under Canvas Under Wraps";
+entry[20] = "Telephones can be your friend";
+entry[19] = "Apocalypse soon?";
+entry[18] = "Neutered by the network";
+entry[17] = "Unexpected offer";
+entry[16] = "A weekend of barbecues";
+entry[15] = "Passing Ships";
+entry[14] = "Fox";
+entry[13] = "What's In A Name?";
+entry[12] = "Begbie's Nightmare";
+entry[11] = "Libraries";
+entry[10] = "Dick Dastardly";
+entry[9] = "Whither the good music?";
+entry[8] = "Yes, sun.";
+entry[7] = "Sun?!";
+entry[6] = "One of those days";
+entry[5] = "Confident Conversation";
+entry[4] = "Acquisition!";
+entry[3] = "Web Weirdos";
+
+	var nowish = new Date();
+	var dom = 1;
+	var dow = 0;
+	document.writeln("<TABLE WIDTH=196 BORDER=0 CELLSPACING=0 ALIGN=LEFT><TR ALIGN=CENTER><TD WIDTH=28><A HREF=\"" + year + lmonth + ".html\" TITLE=\"Back to July 1998\"><IMG BORDER=0 SRC=\"larrow.gif\"></A></TD><TD WIDTH=140 COLSPAN=5>" + monthname + " " + year + "</TD><TD WIDTH=28><A HREF=\"" + year + nmonth + ".html\" TITLE=\"Forward to September 1998\"><IMG BORDER=0 SRC=\"rarrow.gif\"></A></TD></TR><TR ALIGN=CENTER><TD>S</TD><TD>M</TD><TD>Tu</TD><TD>W</TD><TD>Th</TD><TD>F</TD><TD>S</TD></TR><TR ALIGN=CENTER>");
+	while(dow < startday) {
+		document.writeln("<TD  BGCOLOR=\"#ffffff\" WIDTH=28>&nbsp</TD>");
+		dow++;
+		}
+	while(dom <= days) {
+		while(dow < 7) {
+			if (dom <= days) {
+			document.write("<TD BGCOLOR=\"#3300cc");
+			} else {
+			document.write("<TD BGCOLOR=\"#ffffff");
+			}
+			document.write("\" WIDTH=28>");
+			if (dom > days) {
+				document.write("&nbsp");
+				} else {
+				if (entry[dom]) {
+					document.write("<B><A HREF=\"" + month + "/" + year + month + dom + ".html\" TITLE= \"" + entry[dom] + "\" TARGET=\"dayview\" onClick=\"header(" + dom + ")\">");
+					}
+				document.write(dom + "</B></A>"); 
+				}
+			document.writeln("</TD>");
+			dow++;
+			dom++;
+
+			}
+		dow = 0;
+		document.writeln("</TR><TR ALIGN=CENTER>");
+	}
+	document.write("</TR></TABLE>");
+
+}
+
+// -->
+
+</SCRIPT>
+</HEAD>
+<BODY LINK="#ffff00" VLINK="#cccccc" BGCOLOR="#ffffff" TEXT="#000000" ALINK="#ff3300">
+
+<SCRIPT>
+
+<!--
+
+calendar(31,6);
+
+//-->
+
+</SCRIPT>
+</BODY></HTML>

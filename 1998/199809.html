@@ -1,0 +1,124 @@
+<HTML>
+
+<STYLE TYPE="text/css">
+<!--
+A:link { text-decoration: none }
+A:active { text-decoration: none }
+A:visited { text-decoration: none }
+A:hover { background-color: #00FF00;
+	color: #3300cc }
+
+// -->
+</STYLE>
+
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+
+<!--
+
+document.write();
+
+function header(d)
+{
+	parent.headview.document.clear();
+	parent.headview.document.write("<HTML><BODY BGCOLOR=\"#FFFFFF\" TEXT=\"#000000\" LINK=\"#CC0000\" VLINK=\"#330099\" ALINK=\"#FF3300\"><FONT FACE=\"Verdana, Univers, Arial, Sans-Serif, Helvetica\" SIZE=+3><B>" + d + " " + monthname + " " + year + " </B><FONT SIZE=0 COLOR=gray>Y2K-" + (488-d) + "<BR><FONT SIZE=+2 COLOR=black>" + entry[d] + "</BODY><HTML>");
+	parent.headview.document.close();
+
+}
+
+function inents()
+{
+	for (var i = 1; i <= 31; i++)
+		this[i]=0;
+}
+
+function calendar(days,startday) 
+{
+
+
+	lmonth = "08";
+	month = "09";
+	nmonth = "10";
+	monthname = "September"
+	year = "1998";
+
+	entry = new inents();
+
+entry[30] = "Rain.";
+entry[29] = "A night under the stars";
+entry[28] = "The Cairnwell";
+entry[27] = "Auld Reekie";
+entry[25] = "A mild case of hypochondriasis";
+entry[24] = "Optimum strategies for postponing death";
+entry[23] = "Hump Day";
+entry[22] = "Double Initials";
+entry[21] = "Gardening";
+entry[20] = "South Yorkshire 90210";
+entry[19] = "funny junk mail";
+entry[18] = "can't escape...";
+entry[17] = "a la piss";
+entry[16] = "dull dull dull";
+entry[15] = "Yet another poor test of ability.";
+entry[14] = "A brief Holiday.";
+entry[11] = "999.";
+entry[10] = "Pros and Cons:  I - The Pros.";
+entry[9] = "Car Contents";
+entry[8] = "Technology Screws Up, Episode 578";
+entry[7] = "Looking forth and aft";
+entry[4] = "I Can See Clearly Now";
+entry[3] = "Like A Motorway";
+entry[2] = "Not again?";
+entry[1] = "Ups and Downs";
+
+	var nowish = new Date();
+	var dom = 1;
+	var dow = 0;
+	document.writeln("<TABLE WIDTH=196 BORDER=0 CELLSPACING=0 ALIGN=LEFT><TR ALIGN=CENTER><TD WIDTH=28><A HREF=\"" + year + lmonth + ".html\"><IMG BORDER=0 SRC=\"larrow.gif\"></A></TD><TD WIDTH=140 COLSPAN=5>" + monthname + " " + year + "</TD><TD WIDTH=28><A HREF=\"" + year + nmonth + ".html\"><IMG BORDER=0 SRC=\"rarrow.gif\"></A></TD></TR><TR ALIGN=CENTER><TD>S</TD><TD>M</TD><TD>Tu</TD><TD>W</TD><TD>Th</TD><TD>F</TD><TD>S</TD></TR><TR ALIGN=CENTER>");
+	while(dow < startday) {
+		document.writeln("<TD  BGCOLOR=\"#ffffff\" WIDTH=28>&nbsp</TD>");
+		dow++;
+		}
+	while(dom <= days) {
+		while(dow < 7) {
+			if (dom <= days) {
+				document.write("<TD BGCOLOR=\"#3300cc");
+				} else {
+				document.write("<TD BGCOLOR=\"#ffffff");
+				}			
+			document.write("\" WIDTH=28>");
+			if (dom > days) {
+				document.write("&nbsp");
+				} else {
+				if (entry[dom]) {
+					document.write("<B><A HREF=\"" + month + "/" + year + month + dom + ".html\" TITLE= \"" + entry[dom] + "\" TARGET=\"dayview\" onClick=\"header(" + dom + ")\">");
+					}
+				document.write(dom + "</B></A>"); 
+				}
+			document.writeln("</TD>");
+			dow++;
+			dom++;
+
+			}
+		dow = 0;
+		document.writeln("</TR><TR ALIGN=CENTER>");
+	}
+	document.write("</TR></TABLE>");
+
+}
+
+// -->
+
+</SCRIPT>
+
+</HEAD>
+<BODY LINK="#ffff00" VLINK="#cccccc" BGCOLOR="#ffffff" TEXT="#000000" ALINK="#ff3300">
+<SCRIPT LANGUAGE="JavaScript">
+
+<!--
+
+calendar(30,2);
+
+// -->
+
+</SCRIPT>
+</BODY></HTML>

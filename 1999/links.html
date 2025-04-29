@@ -1,0 +1,97 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+
+function formHandler(){
+var URL = document.form.site.options[document.form.site.selectedIndex].value;
+window.location.href = URL;
+}
+
+
+function cast()
+{
+	parent.headview.document.clear();
+	parent.headview.document.write("<HTML><BODY BGCOLOR=\"#FFFFFF\" TEXT=\"#000000\" LINK=\"#CC0000\" ALINK=\"#FF3300\" VLINK=\"#330099\"><CENTER><FONT FACE=\"Verdana, Univers, Arial, Sans-Serif, Helvetica\" SIZE=+3><B>The Stars of Track and Field</B><BR><FONT SIZE=+2>A brief guide to some of the beautiful people</FONT></BODY></HTML>");
+	parent.headview.document.close();
+
+}
+function other()
+{
+	parent.headview.document.clear();
+	parent.headview.document.write("<HTML><BODY BGCOLOR=\"#006400\" TEXT=\"#98fb98\"><CENTER><FONT FACE=\"Verdana, Univers, Arial, Sans-Serif, Helvetica\" SIZE=+3><B>Further Voyeurism</B><BR><FONT SIZE=+2>Some other journals you may enjoy</FONT></BODY></HTML>");
+	parent.headview.document.close();
+
+}
+
+function bio()
+{
+	parent.headview.document.clear();
+	parent.headview.document.write("<HTML><BODY BGCOLOR=\"#e6e6fa\" TEXT=\"#3300cc\" LINK=\"#CC0000\" ALINK=\"#FF3300\" VLINK=\"#330099\"><CENTER><FONT FACE=\"Verdana, Univers, Arial, Sans-Serif, Helvetica\" SIZE=+3><B>B i o g r a p h y</B><BR><FONT SIZE=+2>Coming Soon...</FONT></BODY></HTML>");
+	parent.headview.document.close();
+
+}
+
+function map()
+{
+	parent.headview.document.clear();
+	parent.headview.document.write("<HTML><BODY BGCOLOR=\"#006400\" TEXT=\"#98fb98\" ><CENTER><FONT FACE=\"Verdana, Univers, Arial, Sans-Serif, Helvetica\" SIZE=+3><B>Boozytowns '99</B><BR><FONT SIZE=+2>A hangover journal.</FONT></BODY></HTML>");
+	parent.headview.document.close();
+
+}
+	
+</SCRIPT>
+
+<link rel=stylesheet type="text/css" href="left.css">
+</HEAD>
+
+<BODY>
+<A HREF="../home.html" TARGET="_top" TITLE="Don't judge an online journal by it's cover.  You can have a quick non-judgemental peek, though.">Cover</A><BR>
+<A HREF="ukmap.html" TARGET="dayview" onClick="map()" TITLE="A clickable image map showing the places in which I've been out on the sauce in 1999.  Sort of a hangover journal..">Boozytowns '99</A></BR>
+
+<A HREF="../cast/cast.html" TARGET="dayview" onClick="cast()" TITLE="Want to know a little more about the people I refer to in my journal?  Eager to see silly photos of them?  Click here.">Cast</A><BR>
+<A HREF="../links/diaries.html" TARGET="dayview" onClick="other()" TITLE="A few of the hundreds of online journals that continue to delight and inspire me every day.">Further Voyeurism</A><BR>
+<A HREF="../../postcards/index.html" TARGET="_top" TITLE="Holiday snaps.">Postcards</A><BR>
+<A HREF="../../home.html" TARGET="_top">Homepage</A><BR>
+<A HREF="mailto:journal@horatio.force9.net" TITLE="I look forward to hearing from you :)">Email</A><BR>
+
+
+<!-- Month selection pulldown menu -->
+<FORM name = "form">
+<B>Archives:</B><SELECT NAME="site" SIZE=1>
+<OPTION VALUE="199904top.html">April 1999
+<OPTION VALUE="199903top.html">March 1999
+<OPTION VALUE="199902top.html">February 1999
+<OPTION VALUE="01/199901.html">January 1999
+<OPTION VALUE="../1998/199812.html">December 1998
+<OPTION VALUE="../1998/199811b.html">November 1998
+<OPTION VALUE="../1998/199810b.html">October 1998
+<OPTION VALUE="../1998/199809b.html">September 1998
+<OPTION VALUE="../1998/199808b.html">August 1998
+<OPTION VALUE="../1998/199807b.html">July 1998
+</SELECT>
+<INPUT TYPE="button" VALUE="Go!" onClick ="formHandler()"
+</FORM>
+<BR>&nbsp;<BR>&nbsp;<BR>
+
+<!--    Extreme Tracker Code start
+// -->
+
+<a target=_top href=http://extreme-dm.com/s/?tag=falime>
+<img name=im src=http://extreme-dm.com/i/ height=15
+width=15 border=0></a><script><!--
+an=navigator.appName;sr='http://extreme-dm.com/';srw="na";
+srb="na";d=document;r=41;function pr(n) {d.write("<img width=1 sr",
+"c=\""+sr+""+n+"\/?tag=falime&j=y&srw="+srw+"&srb="+srb+"&l=",
+""+escape(parent.document.referrer)+"&rs="+r+"\" height=1>");}//-->
+</script><script language="javascript1.2"><!--
+s=screen;srw=s.width;an!="Netscape"?srb=s.colorDepth:srb=s.pixelDepth//-->
+</script><script><!--
+d.images?r=d.im.width:z=0;pr("z")//-->
+</script><noscript><img src=http://extreme-dm.com/z/?tag=falime&j=n
+height=1 width=1></noscript>
+
+<!--    Extreme Tracker Code end
+// -->
+
+</BODY>
+</HTML>

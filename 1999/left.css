@@ -1,0 +1,52 @@
+A:link { text-decoration: none;
+	 color: #FFFF00;}
+A:active { text-decoration: none }
+A:visited { text-decoration: none;
+	 color: #98FB98; }
+A:hover { color: #FF8800 }
+
+a {
+	color: #98FB98;
+}
+
+h2 {
+	color: #98fb98;
+	font-size: 24pt;
+	font-family: Verdana, Univers, Arial, Sans-Serif, Helvetica;
+	font-weight: normal;
+}
+
+h3 {
+	color: #98fb98;
+	font-size: 18pt;
+	font-family: Verdana, Univers, Arial, Sans-Serif, Helvetica;
+	font-weight: normal;
+}
+
+h6 {
+	color: #98fb98;
+	font-size: 10pt;
+	font-family: Verdana, Univers, Arial, Sans-Serif, Helvetica;
+	font-weight: normal;
+}
+
+body {
+	background-color: #006400;
+	font-family: Verdana, Univers, Arial, Sans-Serif, Helvetica;
+	font-size: 10pt;
+	color: #5F9EA0;
+}
+
+
+p	{
+	margin: 0;
+	font-family: Verdana, Univers, Arial, Sans-Serif, Helvetica;
+	font-size: 10pt;
+	text-indent: 1.8em;
+}
+
+td {
+	font-family: Verdana, Univers, Arial, Sans-Serif, Helvetica;
+	font-size: 10pt;
+	color: #5F9EA0;
+}

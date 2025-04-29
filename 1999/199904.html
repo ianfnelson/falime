@@ -1,0 +1,110 @@
+<HTML>
+<HEAD>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+<!--
+
+document.write();
+
+function header(d)
+{
+	parent.headview.document.clear();
+	parent.headview.document.write("<HTML><BODY BGCOLOR=\"#FFFFFF\" BACKGROUND=\"04/twirlbin.jpg\" TEXT=\"#000000\"><TABLE BORDER=0><TR><TD WIDTH=90>&nbsp;</TD><TD><FONT FACE=\"Verdana, Univers, Arial, Sans-Serif, Helvetica\" SIZE=+3><B>" + d + " " + monthname + " " + year + " </B><FONT SIZE=0 COLOR=gray>Y2K-" + (276-d) + "<BR></TD></TR><TR><TD WIDTH=90>&nbsp;</TD><TD><FONT FACE=\"Verdana, Univers, Arial, Sans-Serif, Helvetica\" SIZE=+2 COLOR=black>" + entry[d] + "</TD></TR></TABLE></BODY><HTML>");
+	parent.headview.document.close();
+
+}
+
+function inents()
+{
+	for (var i = 1; i <= 31; i++)
+		this[i]=0;
+}
+
+function calendar(days,startday) 
+{
+
+
+	lmonth = "03";
+	month = "04";
+	nmonth = "05";
+	monthname = "April"
+	year = "1999";
+
+	entry = new inents();
+
+entry[26] = "half-baked";
+entry[24] = "is Sylvia there?";
+entry[23] = "mauling";
+entry[22] = "relative sobriety";
+entry[21] = "no such deviations";
+entry[20] = "soggy foothills";
+entry[17] = "vast solid pillar";
+entry[15] = "giddy";
+entry[14] = "primal grunts and moans";
+entry[13] = "big sausage";
+entry[12] = "bland";
+entry[5] = "five years";
+entry[4] = "my legendary girlfriend";
+entry[3] = "stickleback";
+
+	var nowish = new Date();
+	var dom = 1;
+	var dow = 0;
+	document.writeln("<TABLE WIDTH=196 BORDER=0 CELLSPACING=0 ALIGN=LEFT><TR ALIGN=CENTER><TD WIDTH=28><A HREF=\"" + year + lmonth + ".html\" TITLE=\"March 1999\"><IMG BORDER=0 SRC=\"larrow.gif\"></A></TD><TD WIDTH=140 COLSPAN=5><A>" + monthname + " " + year + "</A></TD><TD WIDTH=28>&nbsp;</TD></TR><TR ALIGN=CENTER><TD><A>M</A></TD><TD><A>Tu</A></TD><TD><A>W</A></TD><TD><A>Th</A></TD><TD><A>F</A></TD><TD><A>Sa</A></TD><TD><A>Su</A></TD></TR><TR ALIGN=CENTER>");
+	while(dow < startday) {
+		document.writeln("<TD BGCOLOR=\"#006400\" WIDTH=28>&nbsp</TD>");
+		dow++;
+		}
+	while(dom <= days) {
+		while(dow < 7) {
+			if (dom <= days) {
+
+				if (dow < 5) {
+					document.write("<TD BGCOLOR=\"#6A5ACD");
+				} else {
+					document.write("<TD BGCOLOR=\"#7B68EE");
+				}
+				
+				} else {
+				document.write("<TD BGCOLOR=\"#006400");
+				}
+					
+			document.write("\" WIDTH=28>");
+			if (dom > days) {
+				document.write("&nbsp");
+				} else {
+				if (entry[dom]) {
+					document.write("<B><A HREF=\"" + month + "/" + year + month + dom + ".html\" TITLE= \"" + entry[dom] + "\" TARGET=\"dayview\" onClick=\"header(" + dom + ")\">");
+					}
+				document.write(dom + "</B></A>"); 
+				}
+			document.writeln("</TD>");
+			dow++;
+			dom++;
+
+			}
+		dow = 0;
+		document.writeln("</TR><TR ALIGN=CENTER>");
+	}
+	document.write("</TR></TABLE>");
+
+}
+
+// -->
+
+</SCRIPT>
+<LINK REL=stylesheet TYPE="text/css" HREF="left.css">
+</HEAD>
+
+<BODY>
+<SCRIPT LANGUAGE="JavaScript">
+
+<!--
+
+calendar(30,3);
+
+// -->
+
+</SCRIPT>
+</BODY></HTML>
